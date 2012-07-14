@@ -16,7 +16,7 @@ public class LoadingpanelApplication extends Application {
 
 	private Button startButton;
 	private Table resultTable;
-	private LoadingAnimationPanel loadingPanel;
+	private LoadingPanel loadingPanel;
 	
 	private static final String startButtonCaption =
 			"Click here to start a query, that needs 5 sconds to complete";
@@ -46,7 +46,7 @@ public class LoadingpanelApplication extends Application {
 		resultTable.addContainerProperty("Column3", String.class, null);
 		
 		
-		loadingPanel = new LoadingAnimationPanel();
+		loadingPanel = new LoadingPanel();
 		loadingPanel.setSizeFull();
 		loadingPanel.setNormalContent(resultTable);
 		doDatabeseQuery();
@@ -88,7 +88,7 @@ public class LoadingpanelApplication extends Application {
 				generateRandomData();
 				
 				// after the data has been loaded completely,
-				// we switch the LoadingAnimationPanel to display the content
+				// we switch the LoadingPanel to display the content
 				// instead of the loading animation
 				loadingPanel.showContent();
 				
